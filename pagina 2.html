@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Motos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .motorcycle {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .motorcycle img {
+            max-width: 100%;
+            height: auto;
+        }
+        .motorcycle h2 {
+            margin-top: 0;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .image-gallery img {
+            width: 30%;
+            border-radius: 5px;
+        }
+    
+        .product-info {
+            flex-grow: 1;
+        }
+            .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+    .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+    .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+    .close:hover,
+    .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+        .boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+        </style>
+        
+</head>
+  
+      
+      
+    
+      
+
+<body>
+<a href="index.html" class="boton">Regresar a la página principal</a>
+
+    <header>
+        <h1>Venta de Motos</h1>
+    </header>
+    <div class="container">
+        <div class="image-gallery">
+           
+        </div>
+        <div class="motorcycle">
+            <img src="h2r.jpg" alt="H2R" id="1" width="500">>
+            <h2>H2R</h2>
+            <p>Motor	Refrigeración líquida, 4 tiempos, cuatro en línea, DOHC, 16 válvulas
+                Par motor máximo	164,7 Nm a 12 500 rpm
+                Sistema de combustible	DFI® con cuerpos de mariposa de 50 mm (4) con doble inyección; Supercargador Kawasaki
+                Encendido	Digital
+                Transmisión	6 velocidades, retorno, dog-ringr6.</p>
+            <p>Precio: $5000</p>
+            <form id="formularioPago" style="display: none;">
+                <label for="metodoPago">Seleccione método de pago:</label>
+                <select name="metodoPago" id="metodoPago">
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+                <br>
+                <button type="submit">Pagar</button>
+            </form>
+            <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+            <button onclick="mostrarFormulario()">Comprar</button>
+    
+        
+        </div>
+        <div class="panigale">
+            <img src="ducati.jpg" alt="panigale" id="2"width="500">
+            <h2>panigale</h2>
+            <p>DUCATI PANIGALE V2
+                CILINDRADA: 955 cc.
+                POTENCIA: 155 cv.
+                PAR MOTO: 104 Nm.
+                PESO SECO: 176 kg.
+                ALTURA: 840 mm.
+                DEPÓSITO: 17 L.</p>
+            <p>Precio: $6000</p>
+            <form id="formularioPago" style="display: none;">
+                <label for="metodoPago">Seleccione método de pago:</label>
+                <select name="metodoPago" id="metodoPago">
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+                <br>
+                <button type="submit">Pagar</button>
+            </form>
+            <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+            <button onclick="mostrarFormulario()">Comprar</button>
+        </div>
+        <div class="r6">
+            <img src="r6.jpg" alt="r6"width="500">
+            <h2>r6</h2>
+            <p>Motor: 4 cilindros en línea, refrigerado por líquido
+                Desplazamiento: 599 cc
+                Potencia máxima: alrededor de 120-125 hp (dependiendo del año y la configuración)
+                Torque máximo: alrededor de 65-68 Nm
+                Transmisión: Caja de cambios de 6 velocidades.</p>
+            <p>Precio: $5500</p>
+             <form id="formularioPago" style="display: none;">
+                <label for="metodoPago">Seleccione método de pago:</label>
+                <select name="metodoPago" id="metodoPago">
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+                <br>
+                <button type="submit">Pagar</button>
+            </form>
+            <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+            <button onclick="mostrarFormulario()">Comprar</button>
+        </div>
+        <div class="MT077">
+            <img src="MT077.png" alt="MT077"width="500">
+            <h2>MT077</h2>
+            <p>Motor: Bicilíndrico en línea, refrigerado por líquido
+                Desplazamiento: 689 cc
+                Potencia máxima: alrededor de 73-75 hp
+                Torque máximo: alrededor de 68 Nm
+                Transmisión: Caja de cambios de 6 velocidades.</p>
+            <p>Precio: $4800</p>
+            <form id="formularioPago" style="display: none;">
+                <label for="metodoPago">Seleccione método de pago:</label>
+                <select name="metodoPago" id="metodoPago">
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                </select>
+                <br>
+                <button type="submit">Pagar</button>
+            </form>
+            <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+            <button onclick="mostrarFormulario()">Comprar</button>
+        </div>
+        <div class="250z">
+            <img src="250z.webp" alt="250z"width="500">
+            <h2>250z</h2>
+            <p>Motor: Bicilíndrico en línea, refrigerado por líquido
+                Desplazamiento: 248 cc
+                Potencia máxima: alrededor de 26.5 hp
+                Torque máximo: alrededor de 22.6 Nm
+                Transmisión: Caja de cambios de 6 velocidades.</p>
+            <p>Precio: $5200</p>
+            <button>Comprar</button>
+        </div>
+        <div class="container">
+   
+    </div>
+    <div class="motorcycle">
+        <img src="BMW HP4.jpg" alt="bww"width="500">
+        <h2>BMW
+        </h2>
+        <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+            Desplazamiento: 999 cc
+            Potencia máxima: alrededor de 200 hp
+            Torque máximo: alrededor de 113 Nm
+            Transmisión: Caja de cambios de 6 velocidades con quickshifter.</p>
+        <p>Precio: $5000</p>
+        <button>Comprar</button>
+    </div>
+    <div class="duke">
+        <img src="duke.jpg" alt="duke"width="500">
+        <h2>duke</h2>
+        <p>Motor: Monocilíndrico, refrigerado por líquido
+            Desplazamiento: 373 cc
+            Potencia máxima: alrededor de 43 hp
+            Torque máximo: alrededor de 37 Nm
+            Transmisión: Caja de cambios de 6 velocidades</p>
+        <p>Precio: $6000</p>
+        <button>Comprar</button>
+    </div>
+    <div class="r6">
+        <img src="gsx-r1000r.png" alt="gsx-r1000r"width="500">
+        <h2>gsx-r1000r</h2>
+        <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+            Desplazamiento: 999 cc
+            Potencia máxima: alrededor de 202 hp
+            Torque máximo: alrededor de 117 Nm
+            Transmisión: Caja de cambios de 6 velocidades con quickshifter bidireccional</p>
+        <p>Precio: $5500</p>
+        <button>Comprar</button>
+    </div>
+    <div class="MT077">
+        <img src="hayabusa.png" alt="hayabusa"width="500">
+        <h2>hayabusa</h2>
+        <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+            Desplazamiento: 1340 cc
+            Potencia máxima: alrededor de 190 hp
+            Torque máximo: alrededor de 155 Nm
+            Transmisión: Caja de cambios de 6 velocidades con quickshifter</p>
+        <p>Precio: $4800</p>
+        <button>Comprar</button>
+    </div>
+    <div class="250z">
+        <img src="Honda CBR600RR.jpg" alt="honda 600"width="500">
+        <h2>honda 600</h2>
+        <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+            Desplazamiento: 599 cc
+            Potencia máxima: alrededor de 120 hp
+            Torque máximo: alrededor de 66 Nm
+            Transmisión: Caja de cambios de 6 velocidades</p>
+        <p>Precio: $5200</p>
+        <button>Comprar</button>
+    </div>
+    
+    <div class="container">
+    </div>
+    <div class="motorcycle">
+        <img src="400.jpg" alt="ninja 400"width="500">
+        <h2>ninja 400</h2>|
+        <p>Motor: Bicilíndrico en paralelo, refrigerado por líquido
+            Desplazamiento: 399 cc
+            Potencia máxima: alrededor de 45 hp
+            Torque máximo: alrededor de 38 Nm
+            Transmisión: Caja de cambios de 6 velocidades con embrague deslizante asistido</p>
+        <p>Precio: $5000</p>
+        <button>Comprar</button>
+    </div>
+    <div class="panigale">
+        <img src="Triumph Daytona 675.jpg" alt="daytona"width="500">
+        <h2>daytona</h2>
+        <p>Motor: Tres cilindros en línea, refrigerado por líquido
+            Desplazamiento: 675 cc
+            Potencia máxima: alrededor de 126 hp
+            Torque máximo: alrededor de 74 Nm
+            Transmisión: Caja de cambios de 6 velocidades con quickshifter (según el modelo y el año)</p>
+        <p>Precio: $6000</p>
+        <button>Comprar</button>
+    </div>
+    <div class="motorcycle">
+        <img src="h2r.jpg" alt="H2R" id="1" width="500">>
+        <h2>H2R</h2>
+        <p>Motor	Refrigeración líquida, 4 tiempos, cuatro en línea, DOHC, 16 válvulas
+            Par motor máximo	164,7 Nm a 12 500 rpm
+            Sistema de combustible	DFI® con cuerpos de mariposa de 50 mm (4) con doble inyección; Supercargador Kawasaki
+            Encendido	Digital
+            Transmisión	6 velocidades, retorno, dog-ringr6.</p>
+        <p>Precio: $5000</p>
+        <form id="formularioPago" style="display: none;">
+            <label for="metodoPago">Seleccione método de pago:</label>
+            <select name="metodoPago" id="metodoPago">
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+            <br>
+            <button type="submit">Pagar</button>
+        </form>
+        <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+        <button onclick="mostrarFormulario()">Comprar</button>
+
+    
+    </div>
+    <div class="panigale">
+        <img src="ducati.jpg" alt="panigale" id="2"width="500">
+        <h2>panigale</h2>
+        <p>DUCATI PANIGALE V2
+            CILINDRADA: 955 cc.
+            POTENCIA: 155 cv.
+            PAR MOTO: 104 Nm.
+            PESO SECO: 176 kg.
+            ALTURA: 840 mm.
+            DEPÓSITO: 17 L.</p>
+        <p>Precio: $6000</p>
+        <form id="formularioPago" style="display: none;">
+            <label for="metodoPago">Seleccione método de pago:</label>
+            <select name="metodoPago" id="metodoPago">
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+            <br>
+            <button type="submit">Pagar</button>
+        </form>
+        <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+        <button onclick="mostrarFormulario()">Comprar</button>
+    </div>
+    <div class="r6">
+        <img src="r6.jpg" alt="r6"width="500">
+        <h2>r6</h2>
+        <p>Motor: 4 cilindros en línea, refrigerado por líquido
+            Desplazamiento: 599 cc
+            Potencia máxima: alrededor de 120-125 hp (dependiendo del año y la configuración)
+            Torque máximo: alrededor de 65-68 Nm
+            Transmisión: Caja de cambios de 6 velocidades.</p>
+        <p>Precio: $5500</p>
+         <form id="formularioPago" style="display: none;">
+            <label for="metodoPago">Seleccione método de pago:</label>
+            <select name="metodoPago" id="metodoPago">
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+            <br>
+            <button type="submit">Pagar</button>
+        </form>
+        <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+        <button onclick="mostrarFormulario()">Comprar</button>
+    </div>
+    <div class="MT077">
+        <img src="MT077.png" alt="MT077"width="500">
+        <h2>MT077</h2>
+        <p>Motor: Bicilíndrico en línea, refrigerado por líquido
+            Desplazamiento: 689 cc
+            Potencia máxima: alrededor de 73-75 hp
+            Torque máximo: alrededor de 68 Nm
+            Transmisión: Caja de cambios de 6 velocidades.</p>
+        <p>Precio: $4800</p>
+        <form id="formularioPago" style="display: none;">
+            <label for="metodoPago">Seleccione método de pago:</label>
+            <select name="metodoPago" id="metodoPago">
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+            <br>
+            <button type="submit">Pagar</button>
+        </form>
+        <!-- Botón "Comprar" que muestra el formulario de pago al hacer clic -->
+        <button onclick="mostrarFormulario()">Comprar</button>
+    </div>
+    <div class="250z">
+        <img src="250z.webp" alt="250z"width="500">
+        <h2>250z</h2>
+        <p>Motor: Bicilíndrico en línea, refrigerado por líquido
+            Desplazamiento: 248 cc
+            Potencia máxima: alrededor de 26.5 hp
+            Torque máximo: alrededor de 22.6 Nm
+            Transmisión: Caja de cambios de 6 velocidades.</p>
+        <p>Precio: $5200</p>
+        <button>Comprar</button>
+    </div>
+    <div class="container">
+
+</div>
+<div class="motorcycle">
+    <img src="BMW HP4.jpg" alt="bww"width="500">
+    <h2>BMW
+    </h2>
+    <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+        Desplazamiento: 999 cc
+        Potencia máxima: alrededor de 200 hp
+        Torque máximo: alrededor de 113 Nm
+        Transmisión: Caja de cambios de 6 velocidades con quickshifter.</p>
+    <p>Precio: $5000</p>
+    <button>Comprar</button>
+</div>
+<div class="duke">
+    <img src="duke.jpg" alt="duke"width="500">
+    <h2>duke</h2>
+    <p>Motor: Monocilíndrico, refrigerado por líquido
+        Desplazamiento: 373 cc
+        Potencia máxima: alrededor de 43 hp
+        Torque máximo: alrededor de 37 Nm
+        Transmisión: Caja de cambios de 6 velocidades</p>
+    <p>Precio: $6000</p>
+    <button>Comprar</button>
+</div>
+<div class="r6">
+    <img src="gsx-r1000r.png" alt="gsx-r1000r"width="500">
+    <h2>gsx-r1000r</h2>
+    <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+        Desplazamiento: 999 cc
+        Potencia máxima: alrededor de 202 hp
+        Torque máximo: alrededor de 117 Nm
+        Transmisión: Caja de cambios de 6 velocidades con quickshifter bidireccional</p>
+    <p>Precio: $5500</p>
+    <button>Comprar</button>
+</div>
+<div class="MT077">
+    <img src="hayabusa.png" alt="hayabusa"width="500">
+    <h2>hayabusa</h2>
+    <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+        Desplazamiento: 1340 cc
+        Potencia máxima: alrededor de 190 hp
+        Torque máximo: alrededor de 155 Nm
+        Transmisión: Caja de cambios de 6 velocidades con quickshifter</p>
+    <p>Precio: $4800</p>
+    <button>Comprar</button>
+</div>
+<div class="250z">
+    <img src="Honda CBR600RR.jpg" alt="honda 600"width="500">
+    <h2>honda 600</h2>
+    <p>Motor: Cuatro cilindros en línea, refrigerado por líquido
+        Desplazamiento: 599 cc
+        Potencia máxima: alrededor de 120 hp
+        Torque máximo: alrededor de 66 Nm
+        Transmisión: Caja de cambios de 6 velocidades</p>
+    <p>Precio: $5200</p>
+    <button>Comprar</button>
+</div>
+
+<div class="container">
+</div>
+<div class="motorcycle">
+    <img src="400.jpg" alt="ninja 400"width="500">
+    <h2>ninja 400</h2>|
+    <p>Motor: Bicilíndrico en paralelo, refrigerado por líquido
+        Desplazamiento: 399 cc
+        Potencia máxima: alrededor de 45 hp
+        Torque máximo: alrededor de 38 Nm
+        Transmisión: Caja de cambios de 6 velocidades con embrague deslizante asistido</p>
+    <p>Precio: $5000</p>
+    <button>Comprar</button>
+</div>
+
+<center>
+    <video src="THE RED WOODS _ Ducati Panigale V4s (feat. MOTORBIKEMEDIA).mp4" controls width="500 "></video>
+</center>
+<div class="panigale">
+    <daytona>
+    <h2>panigale</h2>
+    <p>Motor: Tres cilindros en línea, refrigerado por líquido
+        Desplazamiento: 675 cc
+        Potencia máxima: alrededor de 126 hp
+        Torque máximo: alrededor de 74 Nm
+        Transmisión: Caja de cambios de 6 velocidades con quickshifter (según el modelo y el año)</p>
+    <p>Precio: $6000</p>
+    <button>Comprar</button>
+
+ 
+    </div>
+    
+
+</div>
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  
+  <script>
+      document.getElementById('1').addEventListener('click', function() {
+          var modal = document.getElementById("myModal");
+          var modalImg = document.getElementById("modalImage");
+          modal.style.display = "block";
+          modalImg.src = this.src;
+      });
+  
+      function closeModal() {
+          var modal = document.getElementById("myModal");
+          modal.style.display = "none";
+      }
+  </script>
+   <script>
+    document.getElementById('2').addEventListener('click', function() {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    });
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
+ <script>
+    document.getElementById('3').addEventListener('click', function() {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    });
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+        // Función para mostrar el formulario de pago
+        function mostrarFormulario() {
+            var formulario = document.getElementById("formularioPago");
+            formulario.style.display = "block";
+        }
+        function mostrarFormulario() {
+            var formulario = document.getElementById("formularioPago");
+            formulario.style.display = "block";
+        }
+</script>
+
+
+   
+
+</body>
+</body>
+<body background="chayote.jpg" bgcolor="FFCECB">
+
+    <table align= left width="550" bgcolor=FFCECB align=center>
+    <tr>
+        <td>
+
+</html>
